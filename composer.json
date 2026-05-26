@@ -1,0 +1,17 @@
+{
+    "name": "victor.mlima7/jucapizzasrefatorado",
+    "description": "projeto pedagógico para demonstrar a criação de APIs",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "VictorMlima7\\Jucapizzasrefatorado\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Victor-dev47",
+            "email": "victorsp111@outlook.com"
+        }
+    ],
+    "require": {}
+}
