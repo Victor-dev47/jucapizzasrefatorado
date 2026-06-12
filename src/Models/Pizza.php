@@ -1,6 +1,8 @@
 <?php
  
  namespace VictorMlima7\Jucapizzasrefatorado\Models;
+ use Pdo;
+ use Exception;
 class Pizza
 {
     private $conn;
@@ -9,7 +11,15 @@ class Pizza
     public $idPizza;
     public $nome;
     public $ingredientes;
-    public $valor;
+    private float $valor;
+    public function getValor(): float
+    {
+        return $this->valor;
+    }
+    public function setValor(float $valor): void
+    {
+        $this->valor = $valor;
+    }
  
     public function __construct($conexao)
     {

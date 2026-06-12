@@ -51,7 +51,7 @@ if (!$db) {
 $pizza = new Pizza($db);
 $pizza->nome = $data->nome;
 $pizza->ingredientes = $data->ingredientes;
-$pizza->valor = $data->valor;
+$pizza->setValor((float) $data->valor);
  
 if ($pizza->create()) {
     // 201 Created = padrão HTTP para "acabei de nascer um recurso novo".
@@ -61,7 +61,7 @@ if ($pizza->create()) {
         "id" => (int) $pizza->idPizza,
         "nome" => $pizza->nome,
         "ingredientes" => $pizza->ingredientes,
-        "valor" => (float) $pizza->valor,
+        "valor" => (float) $pizza->getValor(),
     ));
 } else {
     header("HTTP/1.1 500 Internal Server Error");
